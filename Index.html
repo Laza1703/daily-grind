@@ -71,7 +71,7 @@
 
      </main>
     <footer>
-      <small>&copy; 2014-2015, All Rights Reserved ~
+      <small>&copy; 2021, All Rights Reserved Laza Matic ~
       <a href="http://validator.w3.org/check/referer" target="_blank">Valid HTML</a> ~
       <a href="http://jigsaw.w3.org/css-validator/check?uri=referer" target="_blank">Valid CSS</a>
       </small>
@@ -94,7 +94,7 @@
 				let myReturn = "";
 				
 				myReturn += `<p> 
-							<img src="images/${coffee.pic}" alt="${coffee.alt}" /> 
+							<img src="images/${coffee.pic}" alt="${coffee.alt}" id="coffee" /> 
 
 							<strong>${coffee.weekday}'s Coffee Special:</strong> ${coffee.weekday}'s daily coffee special is <strong>${coffee.coffee}</strong>, ${coffee.description}
 							</p>`;
@@ -123,6 +123,14 @@
 			switch(today){
 				case 0:
 					today = "Sunday";
+					coffee = {
+						pic: "frappaccino.jpg",	
+						alt: "A pic of Frappaccino",
+						color: "pink",
+						description: `I love Frappaccino`,
+						coffee: "Frappaccino",
+						weekday: "Sunday"					
+					}
 				break;
 
 				case 1:
@@ -166,18 +174,41 @@
 
 				case 4:
 					today = "Thursday";
+					coffee = {
+						pic: "cold-brew.jpg",	
+						alt: "A pic of Cold Brew coffee",
+						color: "blue",
+						description: `I love Cold Brew`,
+						coffee: "Cold Brew",
+						weekday: "Thursday"					
+					}
 				break;
 
 				case 5:
 					today = "Friday";
+					coffee = {
+						pic: "drip.jpg",	
+						alt: "A pic of Drip Coffee",
+						color: "green",
+						description: `I love Drip Coffee`,
+						coffee: "Drip Coffee",
+						weekday: "Friday"					
+					}
 				break;
 
 				case 6:
 					today = "Saturday";
+					coffee = {
+						pic: "mocha.jpg",	
+						alt: "A pic of Mocha Coffee",
+						color: "red",
+						description: `I love Mocha Coffee`,
+						coffee: "Mocha Coffee",
+						weekday: "Saturday"					
+					}
 				break;
 
-				default:
-						today = "Incorrect day";
+				
 
 				}
 
